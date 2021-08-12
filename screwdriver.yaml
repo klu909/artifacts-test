@@ -10,4 +10,4 @@ jobs:
     something:
         requires: [~pr]
         steps:
-            - hello: echo hello
+            - hello: echo hi
