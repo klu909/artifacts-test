@@ -8,7 +8,15 @@ jobs:
               - hello: echo hi
 #             - generate-artifacts:  find ./artifacts -print | sed -e 's;[^/]*/;|____;g;s;____|; |;g'
 #             - copy-to-artifacts-dir: echo $SD_ARTIFACTS_DIR && cp -r ./artifacts $SD_ARTIFACTS_DIR
-    something:
+    prjob:
         requires: [~pr]
+        steps:
+            - hello: echo hi
+    test:
+        requires: [main]
+        steps:
+            - hello: echo hi
+    end:
+        requires: [test]
         steps:
             - hello: echo hi
