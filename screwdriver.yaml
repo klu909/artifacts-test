@@ -15,7 +15,7 @@ jobs:
     test:
         requires: [main]
         steps:
-            - hello: echo hi
+            - hello: echo hii
     end:
         requires: [test]
         steps:
