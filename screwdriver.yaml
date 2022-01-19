@@ -19,4 +19,4 @@ jobs:
     end:
         requires: [test]
         steps:
-            - hello: echo hi
+            - hello: echo hii
